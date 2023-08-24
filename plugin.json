@@ -1,26 +1,16 @@
 {
-  "name": "plugin-sample-vite-svelte",
-  "author": "frostime",
-  "url": "https://github.com/siyuan-note/plugin-sample-vite-svelte",
-  "version": "0.1.12",
-  "minAppVersion": "2.9.0",
-  "backends": ["all"],
-  "frontends": ["all"],
+  "name": "siyuan-plugin-dida365",
+  "author": "zuoez02",
+  "url": "https://github.com/zuoez02/siyuan-plugin-dida365",
+  "version": "0.1.0",
+  "minAppVersion": "2.10.0",
   "displayName": {
-    "en_US": "Plugin sample with vite and svelte",
-    "zh_CN": "插件样例 vite + svelte 版"
+    "zh_CN": "滴答清单插件版"
   },
   "description": {
-    "en_US": "SiYuan plugin sample with vite and svelte",
-    "zh_CN": "使用 vite 和 svelte 开发的思源插件样例"
+    "zh_CN": "利用滴答三方接口的滴答清单数据同步工具，逐步替代web app中的滴答清单工具"
   },
   "readme": {
-    "en_US": "README.md",
     "zh_CN": "README_zh_CN.md"
-  },
-  "funding": {
-    "custom": [
-      "https://afdian.net/a/frostime"
-    ]
   }
 }

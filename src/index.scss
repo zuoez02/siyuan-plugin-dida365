@@ -1,26 +1,34 @@
-#helloPanel {
-    border: 1px rgb(189, 119, 119) dashed;
+.plugin-dida-dock {
+  user-select: none;
+
+  .dida-dock-project {
+    padding: 0 10px;
+    margin-bottom: 6px;
+  }
+
+  .dida-dock-project-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+
+  .dida-dock-task {
+    // margin-left: 8px;
+    margin-bottom: 8px;
+    line-height: 1;
+    user-select: text;
+
+    & > svg {
+      width: 18px;
+      height: 12px;
+      display: inline-block;
+      z-index: 1;
+      position: relative;
+    }
+  }
 }
-
-.plugin-sample {
-    &__custom-tab {
-        background-color: var(--b3-theme-background);
-        height: 100%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__custom-dock {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__time {
-        background: var(--b3-card-info-background);
-        border-radius: 4px;
-        padding: 2px 8px;
-    }
+.sy__siyuan-plugin-dida365dida365Dock {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
