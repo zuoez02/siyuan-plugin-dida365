@@ -17,7 +17,6 @@
   
 
   onMount(() => {
-    console.log(syncData);
     document
       .querySelector(".plugin-dida-dock")
       .addEventListener("copy", (event) => {
