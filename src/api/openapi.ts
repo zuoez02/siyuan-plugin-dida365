@@ -46,6 +46,10 @@ export class OpenAPI {
         return res.text();
     }
 
+    getProjectCompletedTasks(projectId) {
+        return this.request(`/api/v2/project/${projectId}/completed`, 'GET');
+      }
+
     getProjectWithData(projectId) {
         return this.request(`/open/v1/project/${projectId}/data`, 'GET')
     }
@@ -59,6 +63,8 @@ export class OpenAPI {
         const result = [];
         for (const p of projects) {
             const data = await this.getProjectWithData(p.id);
+            const completed = await this.getProjectCompletedTasks(p.id);
+            data.tasks = data.tasks.concat(completed);
             result.push(data);
         }
         return result;

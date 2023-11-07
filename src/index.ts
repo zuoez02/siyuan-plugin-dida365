@@ -58,6 +58,14 @@ export default class Dida365 extends Plugin {
                 if (this.config.syncTime) {
                     menu.addSeparator();
                     menu.addItem({
+                        label: this.i18n.copyToday,
+                        icon: 'iconCopy',
+                        click: () => {
+                            this.copyTodayFinishedToClipboard();
+                        }
+                    })
+                    menu.addSeparator();
+                    menu.addItem({
                         label:
                             this.i18n.lastSyncTime +
                             ": " +
@@ -69,6 +77,25 @@ export default class Dida365 extends Plugin {
             },
         });
     }
+    
+    copyTodayFinishedToClipboard() {
+        const today = new Date().toLocaleDateString();
+        const todayTasks = [];
+        this.config.syncData.forEach((project) => {
+          const tasks = project.tasks;
+          tasks.forEach((task) => {
+            if (task.status === 2) {
+              const ct = new Date(task.completedTime).toLocaleDateString();
+              if (ct === today) {
+                todayTasks.push(task);
+              }
+            }
+          });
+        });
+        const taskMD = todayTasks.map((t) => `* [ ] ${t.title}`).join("\n");
+        navigator.clipboard.writeText(taskMD);
+        showMessage(this.i18n.copyFinished);
+      }
 
     async init() {
         const conf = await this.loadConfig();

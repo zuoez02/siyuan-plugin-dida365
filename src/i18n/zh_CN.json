@@ -9,5 +9,7 @@
     "logout": "登出",
     "unauthorized": "用户授权过期或未授权,请重新登录",
     "exceedQueryLimit": "滴答清单接口查询过快，请稍后再试",
-    "unknownError": "未知错误，请稍后再试"
+    "unknownError": "未知错误，请稍后再试",
+    "copyToday": "复制今日已完成",
+    "copyFinished": "已复制至剪贴板"
 }

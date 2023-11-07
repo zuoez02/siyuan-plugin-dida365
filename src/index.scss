@@ -32,3 +32,7 @@
     display: flex;
     flex-direction: column;
 }
+
+span.completed-task {
+  text-decoration: line-through;
+}
