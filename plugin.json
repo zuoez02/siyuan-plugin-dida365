@@ -2,13 +2,13 @@
   "name": "siyuan-plugin-dida365",
   "author": "zuoez02",
   "url": "https://github.com/zuoez02/siyuan-plugin-dida365",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "minAppVersion": "2.10.0",
   "displayName": {
     "zh_CN": "滴答清单插件版"
   },
   "description": {
-    "zh_CN": "利用滴答三方接口的滴答清单数据同步工具，逐步替代web app中的滴答清单工具"
+    "zh_CN": "利用滴答三方接口的滴答清单数据同步工具与快捷功能，建议与WebAPP插件中的滴答清单配合使用"
   },
   "readme": {
     "zh_CN": "README_zh_CN.md"
